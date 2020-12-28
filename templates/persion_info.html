@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+个人主页
+{% endblock %}
+{% block main %}
+
+<center>{% print('用户名:  %s'%user.username) %}</center>
+<center>{% print('用户手机号:  %s'%user.telephone) %}</center>
+<center>{% print('粉丝数:  %d'%followers_num) %}</center>
+    <center>粉丝列表</center>
+    {% for follower in followers %}
+      <center> {% print(follower) %}</center>
+    {% endfor %}
+{% endblock %}
